@@ -46,5 +46,19 @@ To run the test scripts on your local machine from GitHub(Gitlab), please do the
 4.Once all the dependencies are installed run the script using “npm run test”.
 
 5.Scripts to run the code in different mode is present in package.json file. 
+            
+            * npm run test - To run the test in chrome browser normally.
 
+            * npm run testCross - To run the test in different browsers.
+
+            * npm run testReport - It will run the test and save the report in Test_Reports file in     HTMLformat.
+
+            *npm run testScreenShot - To run the test and add the Screenshots.
+
+            *npm run testEdge - To run the Script in edge browser.
+
+            *npm run test-Env - Run the test based on given meta value.
+
+            *npm run testEvidence - Run the test and takes the Screenshot when the test fails and save the Screen shots in Evidence folder.
+ 
 6.Test Scenarios prepared for automation Scripts are also added in the Test Design.xlsx file inside the folder.

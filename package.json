@@ -2,7 +2,7 @@
   "scripts": {
     "test": "testcafe chrome testautomation-web/Functional_tests/tests/*.js --disable-screenshots",
     "testScreenShot": "testcafe chrome testautomation-web/Functional_tests/tests/*.js",
-    "testEdge": "testcafe edge testautomation-web/Functional_tests/tests/*.js",
+    "testEdge": "testcafe edge testautomation-web/Functional_tests/tests/*.js --disable-screenshots",
     "testCross": "testcafe chrome,edge testautomation-web/Functional_tests/tests/*.js",
     "testReport" : "testcafe chrome testautomation-web/Functional_tests/tests/*.js --skip-js-errors --reporter html:testautomation-web/Functional_tests/Test_Reports/TestResults.html",
     "test-Env" : "testcafe chrome testautomation-web/Functional_tests/tests/*.js --fixture-meta Env=Local",
