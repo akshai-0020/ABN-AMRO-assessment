@@ -51,7 +51,7 @@ To run the test scripts on your local machine from GitHub(Gitlab), please do the
 
             * npm run testCross - To run the test in different browsers.
 
-            * npm run testReport - It will run the test and save the report in Test_Reports file in     HTMLformat.
+            * npm run testReport - It will run the test and save the report in Test_Reports file in HTML format.
 
             * npm run testScreenShot - To run the test and take the Screenshots needed.
 
