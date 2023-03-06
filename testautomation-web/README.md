@@ -41,6 +41,8 @@ To run the test scripts on your local machine from GitHub(Gitlab), please do the
 
 3.Before running the script add the location path of the index.html in the Functional_tests/config_file/config.json under pageUrl.
 
+     Use the format as "C:/Users/AKSHAIS/Music/ABN-AMRO-assessment/testautomation-web/index.html"
+     
 4.Once all the dependencies are installed run the script using “npm run test”.
 
 5.Scripts to run the code in different mode is present in package.json file. 
