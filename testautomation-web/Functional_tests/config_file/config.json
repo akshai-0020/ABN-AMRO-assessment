@@ -1,0 +1,18 @@
+{
+    "Login":{
+        "email" : "biancunha@gmail.com",
+        "password" : "123456",
+        "pageUrl" : "C:/Users/AKSHAIS/Music/ABN-AMRO-assessment/testautomation-web/index.html",
+        "Heading" : "Automation doesn't stop at testing, it's just a beginning!",
+        "invalidEmail" : "admin@a.com",
+        "invalidPassword" : "3456789",
+        "invalidAlert" : "Customer does not exist. Please enter valid email and password"
+    },
+    "Homepage":{
+        "homeLink" : "/home",
+        "productLink" : "/products",
+        "contactLink" : "/contact",
+        "welcomeMessage" : "Thank you for participating!"
+        
+    }
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Contents/bootstrap-sortable.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/bootstrap-sortable.js"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/moment.min.js"></script>
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+
+      .thumbImg {
+        width: 100%;
+        max-width: 35px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        border-width: 1px;
+        border-color: #f1f1f1;
+        border-style: solid;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.7);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      .closeModal {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .closeModal:hover,
+      .closeModal:focus {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <span class="closeModal">&times;</span>
+      <img class="modal-content" id="modelImage">
+    </div>
+    <div class="container">
+
+      <h1 class="text-primary">TestCafe Test Summary</h1>
+      <div class="client-logo" style="padding:15px"></div>
+      <div class="bg-primary" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
+        <h3>Summary</h3><br>
+        <p class="lead">Start Time: Mon Mar 06 2023 09:09:33 GMT+0530 (India Standard Time)</p>
+        <p class="lead">Browsers: Chrome 110.0.0.0 / Windows 11</p>
+        <p class="lead">Duration: 28s</p>
+        <p class="lead">Tests Failed: 4 out of 9</p>
+        <p class="lead">Tests Skipped: 0</p>
+      </div><br>
+      <table class="table sortable" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Fixture</th>
+            <th>Test Name</th>
+            <th>Browsers</th>
+            <th>Duration</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr class="success">
+  <td>1</td>
+  <td>Check user can able to navigate to login page</td>
+  <td>To check user can able to navigate to Login page</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>1s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>2</td>
+  <td>Login functionality with valid user data</td>
+  <td>To check user can able to Login into the profile with valid email id and password</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>1s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>3</td>
+  <td>Login functionality with valid user data</td>
+  <td>To check user can able to Logout after the successful login</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>2s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="danger">
+  <td>4</td>
+  <td>Login page-Error Scenarios</td>
+  <td>To check user can able to view alert while entering invalid email id and password</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>5s</td>
+  <td><a href="#test-4">failed</a></td>
+ </tr>
+ <tr class="danger">
+  <td>5</td>
+  <td>Check the header buttons of the Home page</td>
+  <td>Check the Home button on the header of the page</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>5s</td>
+  <td><a href="#test-5">failed</a></td>
+ </tr>
+ <tr class="danger">
+  <td>6</td>
+  <td>Check the header buttons of the Home page</td>
+  <td>Check the Product button on the header of the page</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>5s</td>
+  <td><a href="#test-6">failed</a></td>
+ </tr>
+ <tr class="danger">
+  <td>7</td>
+  <td>Check the header buttons of the Home page</td>
+  <td>Check the Contact button on the header of the page</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>5s</td>
+  <td><a href="#test-7">failed</a></td>
+ </tr>
+ <tr class="success">
+  <td>8</td>
+  <td>Check the welcome message in footer of the page</td>
+  <td>Verify the welcome message in the bottom of the page</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>1s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>9</td>
+  <td>Check the content on the Home page after login</td>
+  <td>To verify the content message is displayed in the home page properly</td>
+  <td>Chrome 110.0.0.0 / Windows 11</td>
+  <td>1s</td>
+  <td>passed</td>
+ </tr>
+
+        </tbody>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+      <br>
+      <h3>Error Details</h3>
+       <h4 id="test-4" style="color: red;">4. Login page-Error Scenarios - To check user can able to view alert while entering invalid email id and password</h4>
+ <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">AssertionError: expected &#39;Automation doesn\&#39;t stop at testing, it\&#39;s just a beginning!\nUser\n\n\nPassword&#39; to include &#39;Customer does not exist. Please enter valid email and password&#39;
+
+Browser: Chrome 110.0.0.0 / Windows 10
+
+   44 |    .typeText(CustomerLoginpage.password,Labels.Login.invalidPassword)
+   45 |    .click(CustomerLoginpage.login)
+   46 |    //Checks the login is not performed for invalid login credentials.
+   47 |    .expect(CustomerLoginpage.heading.innerText).eql(Labels.Login.Heading)
+   48 |    //Expected to display the alert for invalid email and password.
+ &gt; 49 |    .expect(CustomerLoginpage.loginAlert.innerText).contains(Labels.Login.invalidAlert)
+   50 |&#125);
+
+   at &lt;anonymous&gt; (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\CustomerLoginValidation.js:49:53)
+   at asyncGeneratorStep (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\CustomerLoginValidation.js:4:48)
+   at _next (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\CustomerLoginValidation.js:4:48)
+   at &lt;anonymous&gt; (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\CustomerLoginValidation.js:4:48)
+   at &lt;anonymous&gt; (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\CustomerLoginValidation.js:4:48)
+   at &lt;anonymous&gt; (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\CustomerLoginValidation.js:50:2) </pre><br> <h4 id="test-5" style="color: red;">5. Check the header buttons of the Home page - Check the Home button on the header of the page</h4>
+ <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">AssertionError: expected &#39;file:///C:/Users/AKSHAIS/Music/testautomation-web/testautomation-web/index.html&#39; to include &#39;/home&#39;
+
+Browser: Chrome 110.0.0.0 / Windows 10
+
+   15 |  await CustomerLoginpage.userLogin(t);
+   16 |  await t
+   17 |  .expect(Homepage.Home.exists).ok()
+   18 |  .click(Homepage.Home)
+   19 |  //Check the current URL and Check whether the page is navigated.
+ &gt; 20 |  .expect(getUrl()).contains(Labels.Homepage.homeLink);
+   21 |&#125);
+   22 |//Given user is on the login page and check link is navigated properly.
+   23 |test(&#39;Check the Product button on the header of the page&#39;, async t =&gt; &#123
+   24 |  await CustomerLoginpage.userLogin(t);
+   25 |    await t
+
+   at &lt;anonymous&gt; (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:20:21)
+   at asyncGeneratorStep (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:5:43)
+   at _next (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:5:43) </pre><br> <h4 id="test-6" style="color: red;">6. Check the header buttons of the Home page - Check the Product button on the header of the page</h4>
+ <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">AssertionError: expected &#39;file:///C:/Users/AKSHAIS/Music/testautomation-web/testautomation-web/index.html&#39; to include &#39;/products&#39;
+
+Browser: Chrome 110.0.0.0 / Windows 10
+
+   24 |  await CustomerLoginpage.userLogin(t);
+   25 |    await t
+   26 |    .expect(Homepage.Product.exists).ok()  
+   27 |    .click(Homepage.Product)
+   28 |    //Check the current URL and Check whether the page is navigated.
+ &gt; 29 |    .expect(getUrl()).contains(Labels.Homepage.productLink)
+   30 |  &#125);
+   31 | //Given user is on the login page and check link is navigated properly.
+   32 |  test(&#39;Check the Contact button on the header of the page&#39;, async t =&gt; &#123
+   33 |    await CustomerLoginpage.userLogin(t);
+   34 |    await t
+
+   at &lt;anonymous&gt; (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:29:23)
+   at asyncGeneratorStep (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:5:43)
+   at _next (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:5:43) </pre><br> <h4 id="test-7" style="color: red;">7. Check the header buttons of the Home page - Check the Contact button on the header of the page</h4>
+ <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">AssertionError: expected &#39;file:///C:/Users/AKSHAIS/Music/testautomation-web/testautomation-web/index.html&#39; to include &#39;/contact&#39;
+
+Browser: Chrome 110.0.0.0 / Windows 10
+
+   33 |    await CustomerLoginpage.userLogin(t);
+   34 |    await t
+   35 |    .expect(Homepage.Contact.exists).ok()  
+   36 |    .click(Homepage.Contact)
+   37 |    //Check the current URL and Check whether the page is navigated.
+ &gt; 38 |    .expect(getUrl()).contains(Labels.Homepage.contactLink)
+   39 |  &#125);
+   40 |//A fixture must be created for the each group of test.
+   41 |fixture(&#39;Check the welcome message in footer of the page&#39;)
+   42 |.page(Labels.Login.pageUrl);
+   43 | //Given user is on the login page and check message in the footer of the page.
+
+   at &lt;anonymous&gt; (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:38:23)
+   at asyncGeneratorStep (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:5:43)
+   at _next (C:\Users\AKSHAIS\Music\testautomation-web\testautomation-web\Functional_tests\tests\HomePageValidation.js:5:43) </pre><br>
+    </div>
+    <script>
+      const modal = document.getElementById('myModal');
+      const modalImage = document.getElementById("modelImage");
+
+      Array.from(document.getElementsByClassName("thumbImg")).forEach(function(el) {
+        el.onclick = function() {
+          modal.style.display = "block";
+          modalImage.src = this.src;
+        }
+      });
+
+      document.getElementsByClassName("closeModal")[0].onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+  <br>
+</html>
