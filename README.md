@@ -37,7 +37,7 @@ To run the test scripts on your local machine from GitHub(Gitlab), please do the
 
    git clone “clone link”.
 
-2.Once it is cloned give “npm i” in the command prompt inside folder”testautomation-web" to install all dependencies needed.
+2.Once it is cloned give “npm i” in the command prompt inside folder”ABN AMRO assesment" to install all dependencies needed.
 
 3.Before running the script add the location path of the index.html in the Functional_tests/config_file/config.json under pageUrl.
 
