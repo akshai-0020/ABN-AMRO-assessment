@@ -33,11 +33,11 @@ Prerequisite: Node.js, git, IDE.
 
 To run the test scripts on your local machine from GitHub(Gitlab), please do the following steps:
 
-1.Click on the clone link from the GitHub(Gitlab).
+1.Click on the clone link from the GitHub(Gitlab). All my tests are stored in functional_tests folder.
 
    git clone “clone link”.
 
-2.Once it is cloned give “npm i” in the command prompt inside folder”ABN AMRO assesment" to install all dependencies needed.
+2.Once it is cloned give “npm i” in the command prompt inside folder”ABN AMRO assesment" to install all node_modules and dependencies needed.
 
 3.Before running the script add the location path of the index.html in the Functional_tests/config_file/config.json under pageUrl.
 
@@ -47,4 +47,4 @@ To run the test scripts on your local machine from GitHub(Gitlab), please do the
 
 5.Scripts to run the code in different mode is present in package.json file. 
 
-6.Test Scenarios prepared for automation are added in the Test plans.xlsx file inside the folder.
+6.Test Scenarios prepared for automation Scripts are also added in the Test plans.xlsx file inside the folder.
