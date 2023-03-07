@@ -59,7 +59,7 @@ fixture('Login page-Error Scenarios')
     .maximizeWindow()
     .setTestSpeed(1);
   });
-//Given user not able to login with invalid credentails and checks for alert.
+//Given user not able to login with invalid credentials and checks for alert.
 test('To check user can able to view alert while entering invalid email id and password', async t => {
     await t
     .typeText(CustomerLoginpage.email,Labels.Login.invalidEmail)
